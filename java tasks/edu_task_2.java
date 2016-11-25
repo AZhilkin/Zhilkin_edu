@@ -15,7 +15,7 @@ public class edu_task_2 implements CommonPartFinder{
         int CurrLength = EndPos-StartPos;
         int N = strings.length;
         while (CurrLength > 0){
-            Pattern p = Pattern.compile("*?" + strings[0].substring(StartPos, EndPos) + "*?");
+            Pattern p = Pattern.compile(strings[0].substring(StartPos, EndPos));
             Matcher m;
             boolean InnerFlag = true;
             for (int i = 1; (i < N)&&InnerFlag; i++){
