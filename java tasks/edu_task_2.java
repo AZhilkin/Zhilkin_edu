@@ -10,10 +10,13 @@ public class edu_task_2 implements CommonPartFinder{
 
     @Override
     public String getMaxLengthCommonPart(String[] strings) {
+		int N = strings.length;
+		if (N == 0) {
+			return null;
+		}
         int StartPos = 0;
         int EndPos = strings[0].length();
         int CurrLength = EndPos-StartPos;
-        int N = strings.length;
         while (CurrLength > 0){
             Pattern p = Pattern.compile(strings[0].substring(StartPos, EndPos));
             Matcher m;

@@ -14,6 +14,9 @@ public class edu_task_1 implements CommonPartFinder{
     @Override
     public String getMaxLengthCommonPrefix(String[] strings) {
         int N = strings.length;
+		if (N == 0){
+			return null;
+		}
         String Common = "";
         boolean Flag = true;
         for (int i = 0; (i < strings[0].length())&&Flag; i++){
