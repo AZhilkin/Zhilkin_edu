@@ -47,7 +47,7 @@ public class edu_task_2 implements CommonPartFinder{
         String Common = "";
         boolean Flag = true;
         for (int i = 0; (i < strings[0].length())&&Flag; i++){
-            for(int j = 1; (i < N)&&Flag; j++){
+            for(int j = 1; (j < N)&&Flag; j++){
                 if(strings[0].charAt(i) != strings[j].charAt(i)){
                     Flag = false;
                     Common = strings[0].substring(0, i);
