@@ -19,13 +19,24 @@ public class edu_task_1 implements CommonPartFinder{
 		}
         String Common = "";
         boolean Flag = true;
-        for (int i = 0; (i < strings[0].length())&&Flag; i++){
+        int tmp = strings[0].length();
+        for (int i = 1; i < N; i++){
+            if(tmp > strings[i].length()){
+                tmp = strings[i].length();
+            }
+        }
+        for (int i = 0; (i <= tmp)&&Flag; i++){
+            if((i == tmp)&&Flag){
+                Flag = false;
+                Common = strings[0].substring(0, i);
+            }
             for(int j = 1; (j < N)&&Flag; j++){
                 if(strings[0].charAt(i) != strings[j].charAt(i)){
                     Flag = false;
                     Common = strings[0].substring(0, i);
                 }
             }
+
         }
         return Common;
     }
