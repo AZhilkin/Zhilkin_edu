@@ -41,10 +41,10 @@ public class edu_task_3 implements TheBiggestIntervalSearchable{
             int tmpStart = starts[i];
             int tmpEnd = ends[i];
             for(int j = 0; j < iter; j++){
-                if(tmpStart < ends[j] && tmpEnd > ends[j] && tmpStart > starts[j]){
+                if(tmpStart <= ends[j] && tmpEnd > ends[j] && tmpStart > starts[j]){
                     tmpStart = starts[j];
                 }
-                if(tmpStart < starts[j] && tmpEnd > starts[j] && tmpEnd < ends[j]){
+                if(tmpStart < starts[j] && tmpEnd >= starts[j] && tmpEnd < ends[j]){
                     tmpEnd = ends[j];
                 }
             }
@@ -57,7 +57,7 @@ public class edu_task_3 implements TheBiggestIntervalSearchable{
     }
 
     private int[] createArray(int start, int end){
-        int[] tmp = new int[end-start];
+        int[] tmp = new int[end-start+1];
         int iter = 0;
         for(int i = start; i <= end; i++){
             tmp[iter] = i;
