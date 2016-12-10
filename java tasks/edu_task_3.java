@@ -4,7 +4,7 @@ package edu_task_3;
  * Created by Alexandr Zhilkin on 10.12.2016.
  */
 
-//import com.education.task3.TheBiggestIntervalSearchable;
+import com.education.task3.TheBiggestIntervalSearchable;
 import java.util.List;
 
 public class edu_task_3 implements TheBiggestIntervalSearchable{
